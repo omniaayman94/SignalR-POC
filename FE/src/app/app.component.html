@@ -1,0 +1,13 @@
+<h2>Stock market</h2>
+
+<div class="container-center" *ngIf="signalrConnectionEstablished$ | async; else loading"
+>
+  <ngx-charts-number-card
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="data"
+  [cardColor]="cardColor"
+  >
+</ngx-charts-number-card>
+</div>
+<ng-template #loading>Loading...</ng-template>
